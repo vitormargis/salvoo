@@ -32,3 +32,37 @@ a {
     display: inline;
     margin: 0 5px -8px 25px;
 }
+
+@media only screen and (max-width: 768px) {
+    body {
+        background: #F07551;
+        color: #FFF;
+        text-align: center;
+        font-family: 'Manrope';
+        font-weight: 700;
+        font-size: 1em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    a {
+        color: #2B3774;
+        text-decoration: none;
+    }
+
+    .logo {
+        width: 75%;
+        margin: 0;
+    }
+
+    .social span img {
+        width: 30px;
+        position: relative;
+        display: inline;
+        margin: 0 5px -8px 25px;
+    }
+}
