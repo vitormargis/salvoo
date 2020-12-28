@@ -1,0 +1,439 @@
+/*
+- não consigo alinhar os logos do FB e IG no header e footer pelo centro verticalmente
+- não sei colocar as proporções adaptáveis ao tamanho da tela
+*/
+
+
+.accordion {
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  margin-top: 20px;
+  background-color: #2c3e50;
+}
+.accordion__intro {
+  position: relative;
+  padding: 20px;
+  cursor: pointer;
+}
+.accordion__content {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 0.25s ease-out;
+  color: #f1f1f1;
+  opacity: 0;
+}
+.accordion h4,
+.accordion p {
+  margin: 0;
+  line-height: 1;
+}
+.accordion h4 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 500;
+}
+.accordion p {
+  color: #f1f1f1;
+  font-size: 15px;
+  margin: 0;
+}
+.accordion__active .accordion__content {
+  padding: 0 20px 20px;
+  opacity: 1;
+}
+
+/* ===================================================================== */
+
+* {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: #ececec;
+    margin: 0px;
+}
+
+h1 {
+    color: #2c306d;
+    font-weight: 800;
+    font-size: 45px;
+    margin: 40px auto 40px auto;
+    text-align: center;    
+}
+
+h2 {
+    color: #2c306d;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 40px auto 0px auto;
+    text-align: center;    
+}
+
+.wrapper {
+    width: 1220px;
+    margin: 0 auto;
+}
+
+/* header */
+
+.main-header {
+    background-color: white;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.51);
+    z-index: 9;
+}
+
+.header-content {
+    background-color: white; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+.header-logo {
+    width: 130px;
+    height: 100%;
+}
+
+.header-menu {
+    display: inline;
+    float: right;
+    height: 100%;
+}
+
+.header-menu ul {
+    list-style: none;
+    font-size: 12px;
+    font-weight: 700;
+    color: #29316f;
+    display: inline-flex;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+.header-menu ul li {
+    padding: 20px 15px;
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: #646464;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.header-social-media-icon {
+    margin: -6px;
+    position: relative;
+    float: left;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: -25px;
+    margin-left: 0;
+}
+
+/* banner principal */
+
+.banner-principal {
+    margin: auto;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+}
+
+.banner-principal img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.banner-principal .is-visible img {
+    animation-name: bannerimg;
+    animation-duration: 60s;    
+    animation-iteration-count: infinite;
+}
+
+@keyframes bannerimg {
+    0% {transform: matrix(1, 0, 0, 1, 0, 0);}
+    50% {transform: matrix(1.1, 0, 0, 1.1, 0, 0);}
+    100% {transform: matrix(1, 0, 0, 1, 0, 0);}
+}
+
+
+/* problemas */
+
+.problemas h2 {
+    color: #2c306d;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 40px auto 0px auto;
+    text-align: center;
+}
+
+.icone-problema {
+    transition: all ease 0.3s;
+    display: inline-block;
+    background-color: white;
+    vertical-align: middle;
+    border-radius: 100%;
+    height: 175px;
+    width: 175px;
+    position: relative;
+    text-align: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center 6px;
+    margin: 40px 12px;
+}
+
+.icone-problema:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.icone-problema img{
+    display: none;
+}
+
+.icone-problema figcaption {
+    font-size: 14px;
+    text-align: center;
+    color: #10183A; /* ñ ta mudando */
+    font-weight: 600;
+    position: absolute;
+    top: 96px;
+    display: block;
+    width: 100%;
+}
+
+/* banner ajuda */
+
+.banner-ajuda {
+    background-color: #706fb1;
+    width: 100%;
+    height: 440px;
+}
+
+.banner-ajuda h2 {
+    color: #FF6666;
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.ilustracao {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    MARGIN: -20px 0 0 0;
+}
+
+.checklist {
+    color: white;
+    list-style: none;
+    font-size: 12px;
+    display: block;
+    float: left;
+    margin: 0 0 0 0;
+    padding: 40px 20px;
+}
+
+.checklist li {
+    padding: 5px 0px 10px 0px;
+    font-size: 15px;
+}
+
+ .checklist li img {
+     position: relative;
+     margin: 0px 0 -5px;
+ }
+
+
+/* segurança */
+
+.seguranca h2 {
+    color: #2c306d;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 30px auto 0px auto;
+    text-align: center;
+}
+
+.seguranca img {  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seguranca p {
+    color: #231F20;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.button {
+    background-color: #2B3773;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* footer */
+
+footer {
+    background-color: #eb6f49;
+    height: 75px;
+}
+
+.footer-content {
+    background-color:  #eb6f49;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+}
+
+.footer-logo {
+    width: 130px;
+    margin: 20px 0 0px 0;
+}
+
+.footer-menu {
+    display: inline;
+    float: right;
+    height: 30px;
+    margin: 25px 0 0;
+}
+
+.footer-menu ul {
+    list-style: none;
+    font-size: 12px;
+    font-family: 'Manrope', sans-serif;
+    display: inline-flex;
+    padding: 0px; /* pq estava 40px na esquerda? */
+    margin: 0;
+    height: 100%;
+}
+
+.footer-menu ul li {
+    padding: 0 15px 0px;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.splide__arrow {
+    display: none !important;
+}
+
+/* PAGINA SOBRE START*/
+
+.sobre {
+    margin-bottom: 105px;
+}
+
+.sobre .content {
+    display: flex;
+    text-align: justify;
+    margin: 0 0 55px;
+    line-height: 25px;
+}
+
+.sobre .content p {
+    margin: 0px 25px 25px 0;
+    font-size: 15px;
+}
+
+.sobre .content img {
+    align-self: flex-start;
+}
+
+
+/* PAGINA SOBRE END*/
+
+/* PAGINA COMO START*/
+
+.como {
+    margin-bottom: 105px;
+}
+
+.como .content {
+    display: flex;
+    text-align: justify;
+    margin: 0 0 0px;
+    line-height: 25px;
+}
+
+.como .content p {
+    margin: 0px 25px 25px 0;
+    font-size: 15px;
+}
+
+.como .content img {
+    align-self: flex-start;
+}
+
+.passo-passo {
+    padding-top: 10px;
+    padding-bottom: 105px;
+    width: 100%;
+    background: #FFF;
+}
+
+.passo-passo .content {
+    display: flex;
+    margin: 0 0 55px;
+    line-height: 25px;
+}
+
+.passo-passo .content p {
+    margin: 0px 25px 25px 0;
+    font-size: 15px;
+}
+
+.passo-passo .content img {
+}
+
+.passo-passo-block {
+    padding: 0 30px 0 0;
+}
+
+.passo-passo-block img {
+    width: 30%;
+    margin-right: 5%;
+    min-height: 100%;
+    float: left;
+}
+
+
+/* PAGINA COMO END*/
+

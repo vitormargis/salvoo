@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvoo</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/stylesheet.css" media="" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://zoltantothcom.github.io/vanilla-js-accordion/styles/vanilla-js-accordion.css" />
+</head>
+
+<body>
+    <div include-html="includes/header.html"></div>
+
+    <main>
+
+        <section class="como wrapper">
+            <header>
+                <h1>Como Funciona</h1>
+            </header>       
+             <div class="content">
+                <div>
+                    <div class="accordion">
+                        <div class="accordion__intro">
+                            <h4>Accordion title</h4>
+                        </div>
+                        <div class="accordion__content">
+                            <p>Accordion content</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion__intro">
+                            <h4>Accordion title</h4>
+                        </div>
+                        <div class="accordion__content">
+                            <p>Accordion content</p>
+                            <p>Accordion content</p>
+                            <p>Accordion content</p>
+                            <p>Accordion content</p>
+                            <p>Accordion content</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/images/sobre-a-salvoo/person-plane.jpg" alt="">
+             </div>
+        </section>
+
+    </main>
+
+    <div include-html="includes/footer.html"></div>    
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script src="https://zoltantothcom.github.io/vanilla-js-accordion/javascript/vanilla-js-accordion.min.js"></script>
+<script src="scripts/include.js"></script>
+<script>
+    includeHTML();
+    const accordions = document.querySelectorAll(".accordion");
+
+    const openAccordion = (accordion) => {
+        const content = accordion.querySelector(".accordion__content");
+        accordion.classList.add("accordion__active");
+        content.style.maxHeight = content.scrollHeight + "px";
+    };
+
+    const closeAccordion = (accordion) => {
+        const content = accordion.querySelector(".accordion__content");
+        accordion.classList.remove("accordion__active");
+        content.style.maxHeight = null;
+    };
+
+    accordions.forEach((accordion) => {
+        const intro = accordion.querySelector(".accordion__intro");
+        const content = accordion.querySelector(".accordion__content");
+
+        intro.onclick = () => {
+            if (content.style.maxHeight) {
+                closeAccordion(accordion);
+            } else {
+                accordions.forEach((accordion) => closeAccordion(accordion));
+                openAccordion(accordion);
+            }
+        };
+    });
+
+</script>
