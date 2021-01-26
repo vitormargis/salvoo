@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvoo</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/stylesheet.css" media="" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+</head>
+
+<body>
+    <div include-html="includes/header.html"></div>
+
+    <section class="banner-principal wrapper banner-desktop"> <!--placeholder até aprender a fazer um banner rotativo-->
+        <div class="splide-1">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide"><img src="./assets/images/banner-home-1.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="./assets/images/banner-home-2.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-principal wrapper banner-mobile"> <!--placeholder até aprender a fazer um banner rotativo-->
+        <div class="splide-2">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide"><img src="./assets/images/banner-home-1-mobile.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="problemas wrapper">
+        <header>
+            <h2>Conheça os principais problemas</h2>
+        </header>
+
+        <div class="icones"> <!--não sabia se usava uma <ul> ou o que-->
+            <figure class="icone-problema" style="background-image: url('./assets/images/iconeProblema01.svg')">
+                <img src="./assets/images/iconeProblema01.svg" alt="">
+                <figcaption>voo<br>atrasado</figcaption>
+            </figure>
+            <figure class="icone-problema" style="background-image: url('./assets/images/iconeProblema02.svg')">
+                <img src="./assets/images/iconeProblema02.svg" alt="">
+                <figcaption>voo<br>cancelado</figcaption>
+            </figure>
+            <figure class="icone-problema" style="background-image: url('./assets/images/iconeProblema03.svg')">
+                <img src="./assets/images/iconeProblema03.svg" alt="">
+                <figcaption>perda de<br>conexão ou<br>overbooking</figcaption>
+            </figure>
+            <figure class="icone-problema" style="background-image: url('./assets/images/iconeProblema04.svg')">
+                <img src="./assets/images/iconeProblema04.svg" alt="">
+                <figcaption>problemas<br>com a bagagem</figcaption>
+            </figure>
+            <figure class="icone-problema" style="background-image: url('./assets/images/iconeProblema05.svg')">
+                <img src="./assets/images/iconeProblema05.svg" alt="">
+                <figcaption>no show<br>(não compareceu)</figcaption>
+            </figure>
+            <figure class="icone-problema" style="background-image: url('./assets/images/iconeProblema06.svg')">
+                <img src="./assets/images/iconeProblema06.svg" alt="">
+                <figcaption>outros<br>problemas</figcaption>
+            </figure>    
+        </div>   
+    </section>
+
+    <section class="banner-ajuda">
+        <div class="wrapper">
+            <header>
+                <h2>Como a Salvoo pode te ajudar</h2>
+            </header>
+
+            <img class="ilustracao" src="./assets/images/passarinho.svg" alt="">
+
+            <ul class="checklist"> <!--não consegui alinhar ícone de checkmark com o texto pelo centro-->
+                <li><img src="./assets/images/checklist.svg" alt="" width="30">Reivindicação totalmente on-line de sua indenização</li>
+                <li><img src="./assets/images/checklist.svg" alt="" width="30">Garantia de segurança dos seus dados</li>
+                <li><img src="./assets/images/checklist.svg" alt="" width="30">Pagamento somente no êxito da reclamação</li>
+                <li><img src="./assets/images/checklist.svg" alt="" width="30">Agilidade e tranquilidade em todas as etapas</li>
+                <li><button type="button" class="button"><a>Conheça a Salvoo</a></button></li>                    
+            </ul>
+
+        </div>
+    </section>
+
+    <section class="seguranca">
+        <header>
+            <h2>Na Salvoo você está protegido</h2>
+        </header>
+
+        <img src="./assets/images/seguranca.svg" alt="" width="300">
+
+        <p>O sistema de segurança da Salvoo permite uma plataforma segura para o envio<br>on-line de seus documentos. Seus dados permanecem privados e não são utilizados<br> para outras finalidades.</p>
+
+        <button type="button" class="button center"><a href="" target="blank">Seus Direitos</a></button>
+    </section>
+
+    <div include-html="includes/footer.html"></div>    
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script src="scripts/include.js"></script>
+<script>
+    includeHTML();
+    new Splide('.splide-1', {
+        type: 'fade',
+        rewind: true,
+        autoplay: true,
+        interval: 6000,
+    }).mount();
+    new Splide('.splide-2', {
+        type: 'fade',
+        rewind: true,
+        autoplay: true,
+        interval: 6000,
+    }).mount();
+</script>
+<script>   
+    setTimeout(() => {
+        const menuButton = document.querySelectorAll(".burger-menu")[0];
+        const menuWrapper = document.querySelectorAll(".header-menu")[0];
+        console.log('dfdfdf')
+
+        menuButton.addEventListener('click', (e) => {
+            console.log(menuWrapper.className.includes('active'))
+            menuWrapper.className = menuWrapper.className.includes('active') ? "header-menu" : "header-menu" + ' active';
+        })
+    },1000)
+</script>

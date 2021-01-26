@@ -1,0 +1,865 @@
+/*
+- não consigo alinhar os logos do FB e IG no header e footer pelo centro verticalmente
+- não sei colocar as proporções adaptáveis ao tamanho da tela
+*/
+
+h3 {
+    color: #6f6eb0;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+strong {
+    font-weight: bolder;
+}
+
+.accordion-direito {
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.accordion-direito:last-child h4 {
+    margin-top: -12px;
+}
+
+.accordion-direito:last-child .accordion-direito__intro {
+  padding: 35px 23% 21px 24%;
+  border-radius: 10px;
+  display: block;
+  position: relative;
+  width: 54%;
+  padding-right: 23%;
+  padding-left: 24%;    
+}
+
+.accordion-direito__intro {
+  cursor: pointer;
+  text-align: left;
+  text-transform: uppercase;
+  background: #6F6EB0;
+  padding: 35px 23% 35px 24%;
+  border-radius: 10px;
+  display: block;
+  position: relative;
+  width: 54%;
+}
+.accordion-direito__content {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 0.25s ease-out;
+  color: #222;
+  opacity: 0;
+}
+.accordion-direito h4{
+  line-height: 1;
+  margin: 0;
+}
+
+.accordion-direito p {
+  margin: 0;
+}
+
+.accordion-direito figure {
+    width: 70px;
+    height: 70px;
+    background: #FFF;
+    display: inline-block;
+    float: left;
+    margin-top: -22px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    margin-right: 25px;
+    background-position: center;
+    background-size: 100%;
+}
+.accordion-direito h4 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+}
+.accordion-direito p {
+  color: #222;
+  font-size: 15px;
+  margin: 0;
+  margin: 20px 0 1px;
+}
+.accordion-direito__active .accordion-direito__content {
+  padding: 0 20px 20px;
+  opacity: 1;
+}
+
+/* ===================================================================== */
+
+.accordion {
+  width: 670px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin: 20px 100px 20px 0px;
+}
+.accordion__intro {
+  cursor: pointer;
+  text-align: left;
+  padding: 35px 20% 55px 0%;
+  border-radius: 0;
+  display: block;
+  position: relative;
+  width: 65%;
+  border-bottom: 1px solid #ccc;
+  margin-left: 15%;
+}
+.accordion__content {
+  padding: 0px 20px 0 15%;
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 0.25s ease-out;
+  color: #222;
+  opacity: 0;
+}
+.accordion h4{
+  margin: 0;
+}
+
+.accordion p {
+  margin: 0;
+}
+
+.accordion figure {
+    width: 50px;
+    height: 50px;
+    background: #FFF;
+    display: inline-block;
+    float: left;
+    margin-top: -12px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    margin-right: 25px;
+    background-position: center;
+    background-size: 100%;
+    margin-left: -22%;
+    transition: transform ease 0.3s;
+}
+
+.accordion__active figure {
+  transform: rotate(90deg);
+}
+
+.accordion h4 {
+  color: #222;
+  font-size: 24px;
+  font-weight: 500;
+}
+.accordion p {
+  color: #222;
+  font-size: 15px;
+  margin: 0;
+  margin: 20px 0 1px;
+}
+.accordion__active .accordion__content {
+  padding: 30px 20px 0 15%;
+  opacity: 1;
+}
+
+/* ===================================================================== */
+
+* {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: #ececec;
+    margin: 0px;
+}
+
+h1 {
+    color: #2c306d;
+    font-weight: 800;
+    font-size: 48px;
+    margin: 40px auto 40px auto;
+    text-align: center;    
+}
+
+h2 {
+    color: #2c306d;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 40px auto 0px auto;
+    text-align: center;    
+}
+
+.wrapper {
+    width: 1220px;
+    margin: 0 auto;
+}
+
+/* header */
+
+.main-header {
+    background-color: white;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.51);
+    z-index: 9;
+}
+
+.header-content {
+    background-color: white; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+.header-logo {
+    width: 130px;
+    height: 100%;
+}
+
+.header-menu {
+    display: inline;
+    float: right;
+    height: 100%;
+}
+
+.header-menu ul {
+    list-style: none;
+    font-size: 12px;
+    font-weight: 700;
+    color: #29316f;
+    display: inline-flex;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+.header-menu ul li {
+    padding: 20px 15px;
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: #646464;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.header-social-media-icon {
+    margin: -6px;
+    position: relative;
+    float: left;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: -25px;
+    margin-left: 0;
+}
+
+/* banner principal */
+
+.banner-principal {
+    margin: auto;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+}
+
+.banner-principal img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.banner-principal .is-visible img {
+    animation-name: bannerimg;
+    animation-duration: 60s;    
+    animation-iteration-count: infinite;
+}
+
+@keyframes bannerimg {
+    0% {transform: matrix(1, 0, 0, 1, 0, 0);}
+    50% {transform: matrix(1.1, 0, 0, 1.1, 0, 0);}
+    100% {transform: matrix(1, 0, 0, 1, 0, 0);}
+}
+
+
+/* problemas */
+
+.problemas h2 {
+    color: #2c306d;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 40px auto 0px auto;
+    text-align: center;
+}
+
+.icone-problema {
+    transition: all ease 0.3s;
+    display: inline-block;
+    background-color: white;
+    vertical-align: middle;
+    border-radius: 100%;
+    height: 175px;
+    width: 175px;
+    position: relative;
+    text-align: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center 6px;
+    margin: 40px 12px;
+}
+
+.icone-problema:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.icone-problema img{
+    display: none;
+}
+
+.icone-problema figcaption {
+    font-size: 14px;
+    text-align: center;
+    color: #10183A; /* ñ ta mudando */
+    font-weight: 600;
+    position: absolute;
+    top: 96px;
+    display: block;
+    width: 100%;
+}
+
+/* banner ajuda */
+
+.banner-ajuda {
+    background-color: #706fb1;
+    width: 100%;
+    height: 440px;
+}
+
+.banner-ajuda h2 {
+    color: #FF6666;
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.ilustracao {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    MARGIN: -20px 0 0 0;
+}
+
+.checklist {
+    color: white;
+    list-style: none;
+    font-size: 12px;
+    display: block;
+    float: left;
+    margin: 0 0 0 0;
+    padding: 40px 20px;
+}
+
+.checklist li {
+    padding: 5px 0px 10px 0px;
+    font-size: 15px;
+}
+
+ .checklist li img {
+     position: relative;
+     margin: 0px 0 -5px;
+ }
+
+
+/* segurança */
+
+.seguranca h2 {
+    color: #2c306d;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 30px auto 0px auto;
+    text-align: center;
+}
+
+.seguranca img {  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seguranca p {
+    color: #231F20;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.button {
+    background-color: #2B3773;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* footer */
+
+footer {
+    background-color: #eb6f49;
+    height: 75px;
+}
+
+.footer-content {
+    background-color:  #eb6f49;
+    margin: auto;
+    height: 100%;
+}
+
+.footer-logo {
+    width: 130px;
+    margin: 20px 0 0px 0;
+}
+
+.footer-menu {
+    display: inline;
+    float: right;
+    height: 30px;
+    margin: 25px 0 0;
+}
+
+.footer-menu ul {
+    list-style: none;
+    font-size: 12px;
+    font-family: 'Manrope', sans-serif;
+    display: inline-flex;
+    padding: 0px; /* pq estava 40px na esquerda? */
+    margin: 0;
+    height: 100%;
+}
+
+.footer-menu ul li {
+    padding: 0 15px 0px;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.splide__arrow {
+    display: none !important;
+}
+
+/* PAGINA SOBRE START*/
+
+.sobre {
+    margin-bottom: 105px;
+}
+
+.sobre .content {
+    display: flex;
+    text-align: justify;
+    margin: 0 0 55px;
+    line-height: 25px;
+}
+
+.sobre .content p {
+    margin: 0px 25px 25px 0;
+    font-size: 15px;
+}
+
+.sobre .content img {
+    align-self: flex-start;
+}
+
+
+/* PAGINA SOBRE END*/
+
+/* PAGINA COMO START*/
+
+.como {
+    margin-bottom: 105px;
+}
+
+.como .content {
+    display: flex;
+    text-align: justify;
+    margin: 0 0 0px;
+    line-height: 25px;
+}
+
+.como .content p {
+    margin: 0px 25px 25px 0;
+    font-size: 15px;
+}
+
+.como .content img {
+    align-self: flex-start;
+}
+
+.passo-passo {
+    padding-top: 10px;
+    padding-bottom: 105px;
+    width: 100%;
+    background: #FFF;
+}
+
+.passo-passo .content {
+    display: flex;
+    margin: 0 0 55px;
+    line-height: 25px;
+}
+
+.passo-passo .content p {
+    margin: 0px 25px 25px 0;
+    font-size: 15px;
+}
+
+.passo-passo .content img {
+}
+
+.passo-passo-block {
+    padding: 0 30px 0 0;
+}
+
+.passo-passo-block img {
+    width: 37%;
+    margin-right: 5%;
+    float: left;
+    max-width: 214px;
+}
+
+
+/* PAGINA COMO END*/
+
+.contact-form {
+    width: 50%;
+    margin-right: 10%;
+}
+
+.formfield {    
+    
+}
+
+.formfield label{
+    width: 100%;
+    font-size: 24px;
+    margin: 0 0 15px;
+    float: left;
+    color: #6871b4;
+}
+
+.formfield input, .formfield textarea{
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+input[type="submit"] {
+  width: 200px;
+  background: #6871b4;
+  color: #FFF;
+  font-size: 20px;
+  padding: 15px 20px;
+  float: right;
+  margin-right: -7%;
+  position: relative;
+}
+
+.banner-mobile {
+    display: none;
+}
+
+.banner-desktop {
+    display: block;
+}
+
+@media only screen and (max-width: 800px) {
+    body, html {
+        overflow-x: hidden;
+    }
+    .wrapper, body, html {
+        width: 100%;
+        display: block;
+    }
+
+    .wrapper {
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+
+    .content {
+        display: block !important;
+        width: 100%;
+    }
+
+    .header-menu, .footer-menu {
+        display: block;
+    }
+
+    .banner-principal {
+        margin: auto;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+    .banner-mobile {
+        display: block;
+        padding: 0;
+        position: relative;
+        top: -65px;
+        margin: 0 0 -60px;
+    }
+
+    .banner-desktop {
+        display: none;
+    }    
+    .checklist li {
+        padding: 5px 0px 10px 0px;
+        font-size: 14px;
+    }
+    .ilustracao {
+        display: inline-block;
+        width: 50%;
+        float: right;
+        margin: -110px 0 0 0;
+        bottom: -340px;
+        position: relative;
+    }
+    .banner-ajuda h2, .seguranca h2 {
+        font-size: 24px;
+    }
+    .seguranca p {
+        color: #231F20;
+        font-size: 11.5px;
+        font-weight: 700;
+        margin-top: 0px;
+        text-align: center;
+        padding: 0px 10px;
+    }
+    .menu-items {
+        display: none;
+        width: 100%;
+    }
+    .header-menu {
+        width: 100%;
+        text-align: center;
+    }
+    .header-menu a {
+        font-size: 14px;
+    }
+    .header-menu ul {
+        display: block;
+    }
+    .active .menu-items {
+        display: block;
+        background: #FFF;
+        margin: -5px 0 0px -22px;
+        width: 105%;
+        border-bottom: 6px solid #eee;
+    }
+
+    .header-social-media-icon {
+        position: absolute;
+        top: 22px;
+        right: 100px;
+    }
+
+    .header-social-media-icon-1 {
+        right: 140px;
+    }
+    .burger-menu {
+        position: absolute;
+        height: 20px;
+        width: 35px;
+        background: #fff;
+        right: 20px;
+        top: 15px;
+        border-top: 5px solid #2b3774;
+        border-bottom: 5px solid #2b3774;
+        border-radius: 3px;
+    }
+
+    .burger-menu:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        background: #2b3774;
+        top: 7px;
+        box-sizing: border-box;
+        position: relative;
+        border-radius: 10px;
+    }
+    .accordion-direito figure {
+        width: 55px;
+        height: 55px;
+        background: #FFF;
+        display: inline-block;
+        float: left;
+        margin-top: -20px;
+        margin-bottom: 0;
+        border-radius: 100%;
+        margin-right: 15px;
+        background-position: center;
+        background-size: 100%;
+        margin-left: 15px;
+    }
+    .accordion-direito__intro {
+        cursor: pointer;
+        text-align: left;
+        text-transform: uppercase;
+        background: #6F6EB0;
+        padding: 35px 5% 35px 0% !important;
+        border-radius: 10px !important;
+        display: block !important;
+        position: relative !important;
+        width: 95% !important;
+    }    
+    .accordion-direito h4 {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .accordion-direito:last-child h4 {
+        margin-top: inherit;
+    }
+
+    .accordion {
+        width: 100%;
+        overflow: hidden;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        margin: 20px 100px 20px 0px;
+    }
+    .accordion__intro {
+        cursor: pointer;
+        text-align: left;
+        padding: 15px 10% 25px 0%;
+        border-radius: 0;
+        display: block;
+        position: relative;
+        width: 75%;
+        border-bottom: 1px solid #ccc;
+        margin-left: 15%;
+    }
+    .accordion__content {
+        padding: 0px 20px 0 15%;
+        max-height: 0;
+        overflow: hidden;
+        will-change: max-height;
+        transition: all 0.25s ease-out;
+        color: #222;
+        opacity: 0;
+    }
+    .accordion h4{
+        margin: 0;
+    }
+
+    .accordion p {
+        margin: 0;
+    }
+
+    .accordion figure {
+        width: 40px;
+        height: 40px;
+        background: #FFF;
+        display: inline-block;
+        float: left;
+        margin-top: -2px;
+        margin-bottom: 0;
+        border-radius: 100%;
+        margin-right: 4px;
+        background-position: center;
+        background-size: 100%;
+        margin-left: -20%;
+        transition: transform ease 0.3s;
+    }
+
+    .accordion__active figure {
+        transform: rotate(90deg);
+    }
+
+    .accordion h4 {
+        color: #222;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .accordion p {
+        color: #222;
+        font-size: 15px;
+        margin: 0;
+        margin: 20px 0 1px;
+    }
+    .accordion__active .accordion__content {
+        padding: 30px 20px 0 15%;
+        opacity: 1;
+    }    
+    .contact-form {
+        width: 90%;
+        margin-right: 10%;
+    }
+    .footer-menu {
+        display: none;
+    }
+    .icone-problema figcaption {
+        font-size: 12px;
+        text-align: center;
+        color: #10183A;
+        font-weight: 600;
+        position: absolute;
+        top: 94px;
+        display: block;
+        width: 100%;
+    }
+    .icones {
+        display: flex;
+        flex-flow: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .icone-problema {
+        transition: all ease 0.3s;
+        display: inline-block;
+        background-color: white;
+        vertical-align: middle;
+        border-radius: 100%;
+        height: 165px;
+        width: 175px;
+        position: relative;
+        text-align: center;
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center 6px;
+        margin: 40px 12px;
+        width: 43%;
+    }    
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvoo</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/stylesheet.css" media="" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://zoltantothcom.github.io/vanilla-js-accordion/styles/vanilla-js-accordion.css" />
+</head>
+
+<body>
+    <div include-html="includes/header.html"></div>
+
+    <section class="como wrapper">
+        <header style="text-align: center;">
+            <h1 style="color: #eb6f49; margin-bottom: 10px;">Para maiores informçaõs</h1>
+            <p style="margin-bottom: 40px;">Mande um email para <a href="">atendimento@salvoo.com.br</a>, visite nossas redes no facebook e instagram,<br />ou preencha o formulário abaixo com a sua mensagem</p>
+        </header>       
+            <div class="content">
+            <form class="contact-form" action="">
+                <div class="formfield">
+                    <label for="">Nome</label>
+                    <input type="text">
+                </div>
+                <div class="formfield">
+                    <label for="">Email</label>
+                    <input type="text">
+                </div>
+                <div class="formfield">
+                    <label for="">Telefone</label>
+                    <input type="text">
+                </div>
+                <div class="formfield">
+                    <label for="">Mensagem</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="formfield">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+            <img style="margin-top:50px" src="assets/images/contato/hero.jpg" alt="">
+            </div>
+    </section>
+
+    <div include-html="includes/footer.html"></div>    
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script src="https://zoltantothcom.github.io/vanilla-js-accordion/javascript/vanilla-js-accordion.min.js"></script>
+<script src="scripts/include.js"></script>
+<script>
+    includeHTML();
+
+</script>
+<script>   
+    setTimeout(() => {
+        const menuButton = document.querySelectorAll(".burger-menu")[0];
+        const menuWrapper = document.querySelectorAll(".header-menu")[0];
+        console.log('dfdfdf')
+
+        menuButton.addEventListener('click', (e) => {
+            console.log(menuWrapper.className.includes('active'))
+            menuWrapper.className = menuWrapper.className.includes('active') ? "header-menu" : "header-menu" + ' active';
+        })
+    },1000)
+</script>
